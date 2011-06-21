@@ -16,7 +16,7 @@ I didn't do this in a vacuum. This is built off of packages and libraries create
 * George Song for django-coverage
 * Gisle Aas for the method django-coverage is implemented in this project
 * Jacob Kaplan-Moss for a culture of documentation plus schooling me personally hard on exceptions and writing better tests.
-* James Tauber for settings.PROJECT_ROOT.
+* James Tauber and Alex Gaynor for settings.PROJECT_ROOT.
 * Nate Aune for teaching me that tests should be a story.
 * Ned Batchelder for coverage.py
 * Steve Holden for teaching me better skills explaining technical things in text.
