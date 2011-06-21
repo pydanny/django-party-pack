@@ -7,7 +7,7 @@ For things with `font like this` it means type it at the command line and hit en
 The Basics
 ===========
 
-0. git clone https://github.com/pydanny/sphinxified-django
+0. git clone https://pydanny@github.com/pydanny/sphinxified-django.git
 1. Make sure you have virtualenv installed.
 2. change directory to the directory that contains this README.rst file.
 3. `virtualenv pollaxe` and then `source pollaxe/bin/activate`
