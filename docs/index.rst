@@ -3,11 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to sphinxified-django's documentation!
-==============================================
+Why Sphinxified Django?
+=======================
 
-Basic File
-----------
+Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from the various :ref:`contributors`, who of whom are all people I admire as Django and Python developers.
+
+As for the name, it was inspired by the wonderful `Sphinx`_ project.
+
+Basic Stuff
+-----------
 
 .. toctree::
    :maxdepth: 2
@@ -24,12 +28,6 @@ API/Reference Docs
 
    reference_polls
    
-Why Sphinxified Django?
-=======================
-
-Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from the various :ref:`contributors`, who of whom are all people I admire as Django and Python developers.
-
-As for the name, it was inspired by the wonderful `Sphinx`_ project. 
 
 Indices and tables
 ==================

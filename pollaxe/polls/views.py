@@ -18,5 +18,5 @@ def poll_detail(request, poll_id, template_name="polls/detail.html"):
     # I used 'poll' instead of 'p' because the pixel shortage is over.
     # If this is too much typing, then just cut-and-paste, okay?
     poll = get_object_or_404(Poll, pk=poll_id)
-    choices = Choice.objects.filter(Choice, poll=poll)
+    choices = Choice.objects.filter(poll=poll)
     return render_to_response(template_name, {'poll': poll, 'choices': choices})    

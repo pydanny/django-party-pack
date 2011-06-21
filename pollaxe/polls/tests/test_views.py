@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
@@ -25,7 +25,7 @@ class TestPollSample(BaseTestCase):
         response = self.client.get(url)
         
         # Show them the print!
-        # print response
+        #print response
         
         self.assertContains(response, "Why is Python awesome?")
         
@@ -42,7 +42,7 @@ class TestPollSample(BaseTestCase):
         #   any custom save methods have been fully fired
         poll = Poll.objects.get(id=new_poll.id)
         
-        url = reverse("poll_index", kwargs={"poll_id": poll.id})
+        url = reverse("poll_detail", kwargs={"poll_id": poll.id})
         response = self.client.get(url)
         
         self.assertContains(response, "Why is Python teh awesome?")        

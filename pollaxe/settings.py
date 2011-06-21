@@ -84,7 +84,7 @@ TEST_RUNNER = 'testrunner.OurCoverageRunner'
 
 COVERAGE_MODULE_EXCLUDES = [
     'tests$', 'settings$', 'urls$', 'locale$',
-    'migrations', 'fixtures', 'admin$',
+    'migrations', 'fixtures',
 ]
 COVERAGE_MODULE_EXCLUDES = PREREQ_APPS
 COVERAGE_REPORT_HTML_OUTPUT_DIR = "coverage"

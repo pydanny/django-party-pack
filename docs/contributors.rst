@@ -9,7 +9,8 @@ I didn't do this in a vacuum. This is built off of packages and libraries create
 * Aaron Kavlie, Geoffrey Jost, and Preston Holmes for helping organize things the Cartwheel way.
 * Audrey Roy for coming up with the idea for the Cartwheel way.
 * Chris Shenton for showing me that more notes are better - even if they seem stupid to take at the time.
-* Eric Holscher for rtfd.org.
+* Eric Holscher for rtfd.org
+* Evgany Fadeev for showing me how to work Sphinx autodoc.
 * Frank Wiles for general Django code cleanliness and inspiring the Cartwheel way.
 * Georg Brandl for Sphinx
 * George Song for django-coverage
