@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib import admin
 
 from polls.models import Poll, Choice
@@ -20,5 +22,9 @@ class PollAdmin(admin.ModelAdmin):
     ]
     inlines = [ChoiceInline]
     list_display = ('question', 'pub_date', 'was_published_today')
+    
+    def was_published_today(self):
+        return self.pub_date.date() == datetime.date.today()
+    was_published_today.short_description = 'Published today?'    
 
 admin.site.register(Poll, PollAdmin)

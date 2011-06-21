@@ -1,0 +1,5 @@
+*pyc
+coverage
+_build
+_static
+_templates
