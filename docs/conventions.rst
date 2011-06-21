@@ -10,6 +10,10 @@ Philosophy
 Zen of Python
 =============
 
+Try it out at the shell::
+
+    import this
+
 My favorite parts:
 
 * Explicit is better than implicit.
@@ -25,7 +29,7 @@ No `import *`! Even in `urls.py`!
 All Docs go on rtfd.org!
 ========================
 
-No alternative compares. Not github or bitbucket or google project wikis or even the python.packages.com site. Stop trying other things and come to the current leader in documentation hosting.
+No alternative compares to http://rtfd.org. Not github, bitbucket, or google project wikis compare. And even the python.packages.com site is out of the lead of rtfd.org. Stop trying other things and come to the current leader in documentation hosting. Why?
 
 1. It takes your repo and makes it look awesome.
 2. It puts all the Python docs into one place for good searching.
@@ -50,6 +54,20 @@ Templates
 urls.py
 =======
 
+Even in urls.py you want clean code, right?
+
+Explicit imports
+----------------
+
+See how it is done::
+
+    # See this commented out? 'import *' usually slows things down AND makes it harder to debug
+    # import *
+
+    # Explicit imports are easier to debug
+    from polls import views
+    ...
+
 Using the url() function
 ------------------------
 
@@ -58,14 +76,14 @@ Pythonistas love explicitly but this is implicit and henceforth not ideal::
     # Don't do this!
     url(
         r'^$',
-        polls.poll_list,
+        views.poll_list,
         'poll_list',
     ),
     
     # Or this!
     (
         r'^$',
-        polls.poll_list,
+        views.poll_list,
         'poll_list',
     ),
 
@@ -73,7 +91,7 @@ And here is the preferred and wonderfully explicit Jacob Kaplan-Moss / Frank Wil
 
     url(
         regex=r'^$',
-        view=polls.poll_list,
+        view=views.poll_list,
         name='poll_list',
     ),
     
@@ -92,12 +110,6 @@ This is hard to debug because Django gets a bit too 'magical' and the trace ofte
 
 Instead we do this::
 
-    # See this commented out? 'import *' usually slows things down AND makes it harder to debug
-    # import *
-
-    # Explicit imports are easier to debug
-    from polls import views
-    ...
     url(regex=r'^$',
         view=views.poll_list,
         name='poll_list',

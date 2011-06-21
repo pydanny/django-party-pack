@@ -27,9 +27,9 @@ API/Reference Docs
 Why Sphinxified Django?
 =======================
 
-Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from people I admire as Django and Python coders.
+Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from the various :ref:`contributors`, who of whom are all people I admire as Django and Python developers.
 
-As for the name, it was inspired by the wonderful Sphinx project. 
+As for the name, it was inspired by the wonderful `Sphinx`_ project. 
 
 Indices and tables
 ==================
@@ -38,3 +38,4 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+.. _`Sphinx`: http://pypi.python.org/pypi/Sphinx
