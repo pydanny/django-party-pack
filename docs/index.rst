@@ -27,7 +27,7 @@ API/Reference Docs
 Why Sphinxified Django?
 =======================
 
-Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from people I admire most as Django and Python coders.
+Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from people I admire as Django and Python coders.
 
 As for the name, it was inspired by the wonderful Sphinx project. 
 
