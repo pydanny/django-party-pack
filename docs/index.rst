@@ -3,12 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Why Sphinxified Django?
+Why django-party-pack?
 =======================
 
 Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from the various :ref:`contributors`, who of whom are all people I admire as Django and Python developers.
-
-As for the name, it was inspired by the wonderful `Sphinx`_ project.
 
 Basic Stuff
 -----------

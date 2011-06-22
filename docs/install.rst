@@ -7,10 +7,10 @@ Installation
 The Basics
 ===========
 
-0. **git clone https://pydanny@github.com/pydanny/sphinxified-django.git**
+0. **git clone https://pydanny@github.com/pydanny/django-party-pack.git**
 1. Make sure you have virtualenv installed.
 2. change directory to the directory that contains this README.rst file.
-3. **virtualenv pollaxe** and then **source pollaxe/bin/activate**
+3. **virtualenv dpkenv** and then **source dpkenv/bin/activate**
 4. **pip install -r requirements.txt**
 5. **mkdir pollaxe/coverage**
 

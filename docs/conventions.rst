@@ -35,7 +35,7 @@ No alternative compares to http://rtfd.org. Not github, bitbucket, or google pro
 2. It puts all the Python docs into one place for good searching.
 3. It plays nice with git, hg, and svn.
 4. Makes your project and work much more visible.
-5. The lead maintainer, Eric Holscher, is incrediblysupportive and has both PSF and Revsys support. 
+5. The lead maintainer, Eric Holscher, is incredibly supportive and has both PSF and Revsys support. 
 
 Code Bits
 ~~~~~~~~~~
