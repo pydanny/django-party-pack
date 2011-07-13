@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(
         regex=r'(?P<poll_id>\d+)/results/$',
         view=views.results,
-        name='poll_result'
+        name='poll_results'
     ),
     
     url(

@@ -1,7 +1,11 @@
 <h1>Show me polls</h1>
 
-<ul>
-{% for poll in latest_poll_list %}
-    <li>{{ poll }}</li>
-{% endfor %}
-</ul>
+{% if latest_poll_list %}
+    <ul>
+    {% for poll in latest_poll_list %}
+        <li><a href="{% url poll_detail poll.pk %}">{{ poll.question }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
