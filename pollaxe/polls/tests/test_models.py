@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from django.contrib.auth.models import User
 from django.test import TestCase
@@ -24,3 +24,17 @@ class TestPolls(BaseTestCase):
         )
         poll.save()
         self.assertTrue(poll_count < Poll.objects.count())
+        
+    def test_was_published_today(self):
+        
+        poll = Poll(
+            question="Django is for the internets",
+            pub_date=datetime.now()
+        )
+        poll.save()
+        self.assertTrue(poll.was_published_today())
+        
+        poll.pub_date = datetime.now() - timedelta(days=3)
+        poll.save()
+        
+        self.assertFalse(poll.was_published_today())
