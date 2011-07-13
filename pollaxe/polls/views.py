@@ -46,4 +46,13 @@ def vote(request, poll_id, template_name=POLL_DETAIL_TEMPLATE):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         url = reverse('poll_results', args=(p.id,))
-        return HttpResponseRedirect(url)    
+        return HttpResponseRedirect(url)
+        
+def results(request, poll_id, template_name="polls/results.html"):
+    poll = get_object_or_404(Poll, pk=poll_id)
+    return render_to_response(template_name, 
+        {'poll': poll},
+        context_instance=RequestContext(request)
+        )
+        
+        
