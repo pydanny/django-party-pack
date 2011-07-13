@@ -6,14 +6,26 @@ urlpatterns = patterns('',
 
     url(
         regex=r'^$',
-        view=views.poll_index,
+        view=views.index,
         name='poll_index',
     ),
 
     url(
         regex=r'^(?P<poll_id>\d+)/$',
-        view=views.poll_detail,
+        view=views.detail,
         name='poll_detail',
+    ),
+    
+    url(
+        regex=r'(?P<poll_id>\d+)/results/$',
+        view=views.results,
+        name='poll_result'
+    ),
+    
+    url(
+        regex=r'(?P<poll_id>\d+)/vote/$',
+        view=views.vote,
+        name='poll_vote'
     ),
     
     # DON'T DO THIS!!!

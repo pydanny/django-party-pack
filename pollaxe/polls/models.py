@@ -6,7 +6,10 @@ class Poll(models.Model):
     pub_date = models.DateTimeField('date published')
     
     def __unicode__(self):
-           return self.question    
+        return self.question
+    
+    def was_published_today(self):
+        return self.pub_date.date() == datetime.date.today()
 
 class Choice(models.Model):
     """Choices on a poll"""
@@ -15,4 +18,4 @@ class Choice(models.Model):
     votes = models.IntegerField()
     
     def __unicode__(self):
-            return self.choice    
+        return self.choice    
