@@ -15,6 +15,7 @@ Basic Stuff
    :maxdepth: 2
    
    install
+   setup_testrunner
    conventions
    contributors
    
