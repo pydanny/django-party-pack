@@ -16,6 +16,7 @@ Basic Stuff
    
    install
    setup_testrunner
+   javascript
    conventions
    contributors
    
