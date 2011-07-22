@@ -6,7 +6,7 @@
 Why django-party-pack?
 =======================
 
-Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from the various :ref:`contributors`, who of whom are all people I admire as Django and Python developers.
+Because these are great patterns and tools that beginners should be exposed to right away. I've learned them from the various :ref:`contributors`, who are people I admire as Django and Python developers.
 
 Basic Stuff
 -----------
