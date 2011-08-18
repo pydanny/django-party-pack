@@ -49,7 +49,7 @@ This may take a few minutes. Feel free to go get some coffee. :)
 Settings setup
 ===============
 
-We're going to follow what Django BDFL Jacob Kaplan-Moss advocates as best practices for dealing with settings. That means we're going to ignore the manage.py file in the root of our Django project and use the django-admin.py script. In order to do that, we need to take a few more steps.
+We're going to follow what Django BDFL Jacob Kaplan-Moss `advocates as best practices for dealing with settings`_. That means we're going to ignore the manage.py file in the root of our Django project and use the django-admin.py script. In order to do that, we need to take a few more steps.
 
 First, we add some virtualenv bits to allow us to access the settings properly::
 
@@ -90,4 +90,5 @@ Want to have a local copy of these documents? Easy! Change to our docs directory
 Now we generate the sphinx docs in html format::
 
     $ make html
-    
+
+.. _`advocates as best practices for dealing with settings`: www.slideshare.net/jacobian/the-best-and-worst-of-django/51
