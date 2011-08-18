@@ -2,7 +2,7 @@
 Installation
 =============
 
-.. note:: For things with **font like this** it means type it at the command line and hit enter.
+.. note:: For things with `$ font like this` it means type it at the command line and hit enter.
 
 Before you start
 ================
