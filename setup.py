@@ -37,7 +37,9 @@ setup(
     platforms=['OS Independent'], # Python! Yay!
     
     classifiers=CLASSIFIERS,
-    
+
+    # This might seem like a repetition of requirements.txt, but this applies
+    # to the *package*, and requirements are for the *environment*.
     install_requires=[
         'django==1.3',
         'sphinx=1.0.7',
