@@ -9,30 +9,33 @@ Installation
 Before you start
 ================
 
-Make sure you have virtualenv installed::
+Do you have pip, virtualenv, virtualenvwrapper, and git-scm installed? If not, you'll need to get those on your machine before proceeding.
 
-    $ which virtualenv
-    /usr/local/bin/virtualenv 
-    # You should get a response. This is mine but yours may vary. 
-    #   No response means you need to install it.
+If you need to install pip::
+
+    $ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+    $ python get-pip.py
     
-If you need to install virtualenv::
+If you need to install virtualenv:
 
-    # TODO - find a good install link
+    * http://virtualenv.org
+    
+If you need to install virtualenvwrapper:
 
-Make sure you have git-scm installed::
+    * http://www.doughellmann.com/docs/virtualenvwrapper/install.html
 
-    # TODO - find a good install link
+If you need to install git:
 
-Create a virtualenv for this project. We do this so we isolate all our work from the rest of Python on our computer::
-
-    $ virtualenv dpkenv
-    $ source dpkenv/bin/activate
+    * http://git-scm.com
 
 The Basics
 ===========
 
-First we clone django-party-pack and go into django-party-pack::
+Create a virtualenv for this project. We do this so we isolate all our work from the rest of Python on our computer::
+
+    $ mkvirtualenv dpkenv
+
+Now we clone django-party-pack and go into django-party-pack::
 
     $ git clone https://pydanny@github.com/pydanny/django-party-pack.git
     $ cd django-party-pack
@@ -43,27 +46,38 @@ Now let's install our dependencies::
     
 This may take a few minutes. Feel free to go get some coffee. :)
 
-Settings things
+Settings setup
 ===============
 
-TODO - add stuff so that new settings format works
+We're going to follow what Django BDFL Jacob Kaplan-Moss advocates as best practices for dealing with settings. That means we're going to ignore the manage.py file in the root of our Django project and use the django-admin.py script. In order to do that, we need to take a few more steps.
 
+First, we add some virtualenv bits to allow us to access the settings properly::
 
-Building the sphinx docs
-=========================
-
-First we need to change to our docs directory::
-
-    $ cd docs
+    $ echo "export DJANGO_SETTINGS_MODULE=settings.local" >> $VIRTUAL_ENV/bin/postactivate
+    $ echo "unset DJANGO_SETTINGS_MODULE" >> $VIRTUAL_ENV/bin/postdeactivate
     
-Now we generate the sphinx docs in html format::
+This will allow you to eschew passing in --settings= into management commands.
 
-    $ make html
-    
+Now we add to the virtualenv paths our pollaxe project::
 
-2. **make html**
+    add2virtualenv <<path to django-party-pack repo>>/pollaxe
+
 
 Running django-coverage
 ========================
 
-1. python manage.py test
+.. parsed-literal::
+
+    $ django-admin.py test
+    
+Building these sphinx docs
+==========================
+
+Want to have a local copy of these documents? Easy! Change to our docs directory::
+
+    $ cd docs
+
+Now we generate the sphinx docs in html format::
+
+    $ make html
+    
