@@ -12,7 +12,6 @@ The Basics
 2. change directory to the directory that contains this README.rst file.
 3. **virtualenv dpkenv** and then **source dpkenv/bin/activate**
 4. **pip install -r requirements.txt**
-5. **mkdir pollaxe/coverage**
 
 Building the sphinx docs
 =========================

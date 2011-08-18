@@ -18,6 +18,8 @@ In your virtualenv install the necessary requirements::
 
 Make a `coverage` directory in your project directory::
 
+    # This is done for you in django-party-pack
+    #   but you'll need to remember it for future projects
     $ mkdir coverage
 
 Step 2 - create testrunner.py

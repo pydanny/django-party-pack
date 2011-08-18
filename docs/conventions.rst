@@ -33,9 +33,10 @@ No alternative compares to http://rtfd.org. Not github, bitbucket, or google pro
 
 1. It takes your repo and makes it look awesome.
 2. It puts all the Python docs into one place for good searching.
-3. It plays nice with git, hg, and svn.
-4. Makes your project and work much more visible.
-5. The lead maintainer, Eric Holscher, is incredibly supportive and has both PSF and Revsys support. 
+3. It plays nice with git, hg, and svn. Wikis generally are through the web.
+4. You can accept pull requests on docs. This way you can edit/reject bad documentation.
+6. Makes your project and work much more visible.
+7. The lead maintainer, Eric Holscher, is incredibly supportive and has both PSF and Revsys support. 
 
 Code Bits
 ~~~~~~~~~~
@@ -94,6 +95,8 @@ And here is the preferred and wonderfully explicit Jacob Kaplan-Moss / Frank Wil
         view=views.poll_list,
         name='poll_list',
     ),
+
+See how each argument is explicitly named? Wonderful!
     
 
 Calling specific views

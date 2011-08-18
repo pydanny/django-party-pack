@@ -1,8 +1,10 @@
 # Django settings for pollaxe project.
 
-import os.path
+import os
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+settings_dir = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -16,7 +18,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'dev.db',                      # Or path to database file if using sqlite3.
+        'NAME': 'base.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -88,3 +90,24 @@ COVERAGE_MODULE_EXCLUDES = [
 ]
 COVERAGE_MODULE_EXCLUDES += PREREQ_APPS
 COVERAGE_REPORT_HTML_OUTPUT_DIR = "coverage"
+
+HTML_OUTPUT_DIR = os.path.join(REPO_ROOT, "coverage")
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+        }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
+
