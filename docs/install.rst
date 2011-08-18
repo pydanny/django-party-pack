@@ -2,7 +2,9 @@
 Installation
 =============
 
-.. note:: For things with `$ font like this` it means type it at the command line and hit enter.
+.. note:: For things with the following it means type it at the command line and hit enter::
+
+    $ ls -al
 
 Before you start
 ================
