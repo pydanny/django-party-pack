@@ -91,4 +91,4 @@ Now we generate the sphinx docs in html format::
 
     $ make html
 
-.. _`advocates as best practices for dealing with settings`: www.slideshare.net/jacobian/the-best-and-worst-of-django/51
+.. _`advocates as best practices for dealing with settings`: http://www.slideshare.net/jacobian/the-best-and-worst-of-django/51
