@@ -19,8 +19,9 @@ setup(
     author="#YOUR NAME HERE#",
     author_email="#YOU EMAIL HERE#",
     name='django-party-pack',
-
-    version='0.0.1', # TODO: Make this rely on myapp.__version__ instead
+    
+    # The actual version string is defined in pollaxe/__init__.py
+    version= __import__('pollaxe').__version__
     
     description='A Party pack for django!',
 
