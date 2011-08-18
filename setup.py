@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 import os
-import shop
+import codecs
 
 # The following classifiers are a good start, and a safe bet
 # A list of classifiers can be found here:
@@ -25,7 +25,7 @@ setup(
     description='A Party pack for django!',
 
     # The following line uses README.rst as long description.
-    long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
+    long_description=codecs.open(os.path.join(os.path.dirname(__file__), 'README.rst'), 'utf-8').read(),
 
     # Tip: do NOT use download-url! This makes it really painful for most
     # people using tools like buildout. Simply host your downloads on pypi, and
@@ -38,7 +38,12 @@ setup(
     
     classifiers=CLASSIFIERS,
     
-    install_requires=open(os.path.join(os.path.dirname(__file__), 'requirements.txt')).read(),
+    install_requires=[
+        'django==1.3',
+        'sphinx=1.0.7',
+        'django-coverage==1.2',
+        'coverage==3.4',
+    ],
 
     packages=find_packages(), #This auto-finds and includes python pacakges!
     include_package_data=True,
