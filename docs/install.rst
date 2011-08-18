@@ -12,7 +12,9 @@ Before you start
 Make sure you have virtualenv installed::
 
     $ which virtualenv
-    /usr/local/bin/virtualenv # You should get a response. This is mine but yours may vary. No response means you need to install it.
+    /usr/local/bin/virtualenv 
+    # You should get a response. This is mine but yours may vary. 
+    #   No response means you need to install it.
     
 If you need to install virtualenv::
 
