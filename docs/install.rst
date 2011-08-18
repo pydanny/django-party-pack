@@ -41,6 +41,12 @@ Now let's install our dependencies::
     
 This may take a few minutes. Feel free to go get some coffee. :)
 
+Settings things
+===============
+
+TODO - add stuff so that new settings format works
+
+
 Building the sphinx docs
 =========================
 
