@@ -16,13 +16,13 @@ If you need to install pip::
     $ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
     $ python get-pip.py
     
-If you need to install virtualenv:
+If you need to install virtualenv::
 
-    * http://virtualenv.org
+    $ pip install virtualenv
     
-If you need to install virtualenvwrapper:
+If you need to install virtualenvwrapper::
 
-    * http://www.doughellmann.com/docs/virtualenvwrapper/install.html
+    $ pip install virtualenvwrapper
 
 If you need to install git:
 
