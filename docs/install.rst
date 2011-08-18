@@ -62,13 +62,23 @@ Now we add to the virtualenv paths our pollaxe project::
 
     add2virtualenv <<path to django-party-pack repo>>/pollaxe
 
+Running standard Django Commands
+================================
+
+Try out the project::
+
+    $ django-admin.py syncdb
+    $ django-admin.py runserver
 
 Running django-coverage
 ========================
 
-.. parsed-literal::
+Simple run this command::
 
     $ django-admin.py test
+
+Now open the pollaxe/coverage/index.html file in your favorite browser.
+
     
 Building these sphinx docs
 ==========================
