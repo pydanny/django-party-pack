@@ -47,7 +47,7 @@ setup(
     install_requires=[
         'django==1.3',
         'sphinx=1.0.7',
-        'django-coverage==1.2',
+        'django-coverage==1.2.1',
         'coverage==3.4',
     ],
 
