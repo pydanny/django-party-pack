@@ -91,7 +91,7 @@ COVERAGE_MODULE_EXCLUDES = [
 COVERAGE_MODULE_EXCLUDES += PREREQ_APPS
 COVERAGE_REPORT_HTML_OUTPUT_DIR = "coverage"
 
-HTML_OUTPUT_DIR = os.path.join(REPO_ROOT, "coverage")
+HTML_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "coverage")
 
 LOGGING = {
     'version': 1,
