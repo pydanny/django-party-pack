@@ -53,7 +53,7 @@ We're going to follow what Django BDFL Jacob Kaplan-Moss `advocates as best prac
 
 First, we add some virtualenv bits to allow us to access the settings properly::
 
-    $ echo "export DJANGO_SETTINGS_MODULE=settings.local" >> $VIRTUAL_ENV/bin/postactivate
+    $ echo "export DJANGO_SETTINGS_MODULE=settings.dev" >> $VIRTUAL_ENV/bin/postactivate
     $ echo "unset DJANGO_SETTINGS_MODULE" >> $VIRTUAL_ENV/bin/postdeactivate
     
 This will allow you to eschew passing in --settings= into management commands.
@@ -73,7 +73,7 @@ Try out the project::
 Running django-coverage
 ========================
 
-Simple run this command::
+Simply run this command::
 
     $ django-admin.py test
 
