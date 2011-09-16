@@ -7,7 +7,7 @@ import codecs
 # A list of classifiers can be found here:
 # http://pypi.python.org/pypi?%3Aaction=list_classifiers
 CLASSIFIERS = [
-     'Development Status :: 2 - Pre-Alpha', # Change this accordingly
+     'Development Status :: 2 - Pre-Alpha',  # Change this accordingly
      'Environment :: Web Environment',
      'Framework :: Django',
      'Intended Audience :: Developers',
@@ -15,17 +15,17 @@ CLASSIFIERS = [
      'Operating System :: OS Independent',
      'Programming Language :: Python',
      'Programming Language :: Python :: 2',
-     'Programming Language :: Python :: 2.6', # Maybe add 2.7
+     'Programming Language :: Python :: 2.6',  # Maybe add 2.7
 ]
 
 setup(
     author="#YOUR NAME HERE#",
     author_email="#YOU EMAIL HERE#",
     name='django-party-pack',
-    
+
     # The actual version string is defined in pollaxe/__init__.py
-    version= __import__('pollaxe').__version__
-    
+    version=__import__('pollaxe').__version__
+
     description='A Party pack for django!',
 
     # The following line uses README.rst as long description.
@@ -36,10 +36,10 @@ setup(
     # stop worrying.
 
     url='#A website URL here#',
-    
-    license='BSD License', # Obviously change it to something relevant
-    platforms=['OS Independent'], # Python! Yay!
-    
+
+    license='BSD License',  # Obviously change it to something relevant
+    platforms=['OS Independent'],  # Python! Yay!
+
     classifiers=CLASSIFIERS,
 
     # This might seem like a repetition of requirements.txt, but this applies
@@ -51,8 +51,7 @@ setup(
         'coverage==3.4',
     ],
 
-    packages=find_packages(), #This auto-finds and includes python pacakges!
+    packages=find_packages(),  # This auto-finds and includes python pacakges!
     include_package_data=True,
-    zip_safe = False,
+    zip_safe=False,
 )
-
