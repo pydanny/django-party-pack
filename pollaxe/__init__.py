@@ -12,4 +12,3 @@ Release logic:
 7. push to github (to avoid confusion)
 """
 __version__ = '0.0.0.dev0'
-
