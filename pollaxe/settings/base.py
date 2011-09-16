@@ -88,7 +88,7 @@ COVERAGE_MODULE_EXCLUDES = [
     'tests$', 'settings$', 'urls$', 'locale$',
     'migrations', 'fixtures', 'admin$',
 ]
-COVERAGE_MODULE_EXCLUDES += PREREQ_APPS
+COVERAGE_MODULE_EXCLUDES += ['^%s$' % app for app in PREREQ_APPS]
 COVERAGE_REPORT_HTML_OUTPUT_DIR = "coverage"
 
 HTML_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "coverage")
