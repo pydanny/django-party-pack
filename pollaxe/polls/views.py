@@ -7,7 +7,8 @@ from polls.models import Poll, Choice
 
 POLL_DETAIL_TEMPLATE = "polls/detail.html"
 
-# We pass the template_name as a variable because it makes the template function easier to 
+
+# We pass the template_name as a variable because it makes the template function easier to
 # identify AND because it means it can be changed on the fly
 def index(request, template_name="polls/index.html"):
     """ Show a list of polls"""
@@ -16,16 +17,17 @@ def index(request, template_name="polls/index.html"):
 
 
 def detail(request, poll_id, template_name=POLL_DETAIL_TEMPLATE):
-    """ Show detail on a poll"""    
-    
+    """ Show detail on a poll"""
+
     # I used 'poll' instead of 'p' because the pixel shortage is over.
     # If this is too much typing, then just cut-and-paste, okay?
     poll = get_object_or_404(Poll, pk=poll_id)
     choices = Choice.objects.filter(poll=poll)
     return render_to_response(template_name, {
         'poll': poll,
-        'choices': choices }, 
-        context_instance=RequestContext(request))    
+        'choices': choices},
+        context_instance=RequestContext(request))
+
 
 def vote(request, poll_id, template_name=POLL_DETAIL_TEMPLATE):
     """ user votes on a poll"""
@@ -47,12 +49,11 @@ def vote(request, poll_id, template_name=POLL_DETAIL_TEMPLATE):
         # user hits the Back button.
         url = reverse('poll_results', args=(poll.id,))
         return HttpResponseRedirect(url)
-        
+
+
 def results(request, poll_id, template_name="polls/results.html"):
     poll = get_object_or_404(Poll, pk=poll_id)
-    return render_to_response(template_name, 
+    return render_to_response(template_name,
         {'poll': poll},
         context_instance=RequestContext(request)
         )
-        
-        
