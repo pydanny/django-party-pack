@@ -21,4 +21,4 @@ I didn't do this in a vacuum. This is built off of packages and libraries create
 * Ned Batchelder for coverage.py
 * Steve Holden for teaching me better skills explaining technical things in text.
 
- If I miss anyone I apologize!
+ If I missed anyone I apologize!
