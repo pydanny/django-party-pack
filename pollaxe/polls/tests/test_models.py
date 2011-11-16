@@ -1,9 +1,6 @@
 from datetime import datetime, timedelta
 
-from django.contrib.auth.models import User
-from django.test import TestCase
-
-from polls.models import Choice, Poll
+from polls.models import Poll
 from polls.tests.utils import BaseTestCase
 
 

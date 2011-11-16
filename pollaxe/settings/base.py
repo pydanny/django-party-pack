@@ -89,9 +89,7 @@ COVERAGE_MODULE_EXCLUDES = [
     'migrations', 'fixtures', 'admin$',
 ]
 COVERAGE_MODULE_EXCLUDES += ['^%s$' % app for app in PREREQ_APPS]
-COVERAGE_REPORT_HTML_OUTPUT_DIR = "coverage"
-
-HTML_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "coverage")
+COVERAGE_REPORT_HTML_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "coverage")
 
 LOGGING = {
     'version': 1,

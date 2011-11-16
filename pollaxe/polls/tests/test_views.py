@@ -1,8 +1,5 @@
-from datetime import datetime, timedelta
-
+from datetime import datetime
 from django.core.urlresolvers import reverse
-from django.contrib.auth.models import User
-from django.test import TestCase
 
 from polls.models import Choice, Poll
 from polls.tests.utils import BaseTestCase
@@ -31,9 +28,6 @@ class TestPollSample(BaseTestCase):
         # Now display me a poll!
         url = reverse("poll_index")
         response = self.client.get(url)
-
-        # Show them the print!
-        #print response
 
         self.assertContains(response, "What is your favorite number?")
 
