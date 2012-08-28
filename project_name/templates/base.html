@@ -1,10 +1,8 @@
 <html>
 <head>
 
-    <title>{{ project_name }}: {% block title %}{% endblock %}</title>
+    <title>PROJECT_NAME: {% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.min.css">
-    <script src="{{ STATIC_URL }}js/jquery-1.8.0.min.js"></script>    
-    <script src="{{ STATIC_URL }}js/bootstrap.min.js" type="text/javascript"></script>
     {% block extracss %}{% endblock %}
     
 </head>
@@ -46,6 +44,8 @@
 
 {% block extrajs %}
 {% endblock %}
+<script src="{{ STATIC_URL }}js/jquery-1.8.0.min.js"></script>    
+<script src="{{ STATIC_URL }}js/bootstrap.min.js" type="text/javascript"></script>
 
 
 

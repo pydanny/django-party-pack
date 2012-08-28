@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Register for {{ project_name }}{% endblock  %}
+{% block title %}Register for PROJECT_NAME{% endblock  %}
 
 
 {% block content %}
@@ -9,7 +9,7 @@
 <div class="row">
     <div class="span6 offset2">
       
-        <h1>Register for {{ project_name }}</h1>
+        <h1>Register for PROJECT_NAME</h1>
         <form class='form-stacked well' action="" method="post">
           {% csrf_token %}
           {{ form|crispy }}
