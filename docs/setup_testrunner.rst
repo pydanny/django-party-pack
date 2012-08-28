@@ -7,11 +7,6 @@ Ned Batchelder's coverage.py is an invaluable tool for any Python project. djang
 Step 1 - environment prep
 =========================
 
-In your requirements.txt file, make sure you have the following::
-
-    django-coverage==1.2
-    coverage==3.4
-
 In your virtualenv install the necessary requirements::
 
     $ pip install -r requirements.txt

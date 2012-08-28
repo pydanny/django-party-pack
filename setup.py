@@ -45,9 +45,9 @@ setup(
     # This might seem like a repetition of requirements.txt, but this applies
     # to the *package*, and requirements are for the *environment*.
     install_requires=[
-        'django==1.3',
-        'sphinx=1.0.7',
-        'django-coverage==1.2.1',
+        'django==1.3.2',
+        'sphinx=1.1.3',
+        'django-coverage==1.2.2',
         'coverage==3.4',
     ],
 
