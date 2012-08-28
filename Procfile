@@ -1,0 +1,1 @@
+web: python {{ project_name }}/manage.py run_gunicorn --settings={{ project_name }}.settings.heroku -b "0.0.0.0:$PORT" -w 3

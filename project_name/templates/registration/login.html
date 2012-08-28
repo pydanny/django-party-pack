@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Log in{% endblock %}
+
+{% block content %}
+  <h2>Log in</h2>
+  <div class="row">
+    <div class="span12"
+      <form action="." method="post" class="login_form">{% csrf_token %}
+      {{ form|crispy }}
+        <div class="actions">
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+      {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    $(document).ready(function(){
+        $("#id_username").focus();
+    });
+</script>
+{% endblock extrajs %}

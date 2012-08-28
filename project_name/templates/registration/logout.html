@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% block title %}Logged out{% endblock %}
+
+{% block content %}
+  
+  <div class="row">
+    <div class="span12"
+
+      <h2>Logged out</h2>
+      <p>You have been logged out.</p>  
+      <h2>Log in</h2>  
+      <form action="." method="post" class="login_form">{% csrf_token %}
+      {{ form|crispy }}
+        <div class="actions">
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+      {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    $(document).ready(function(){
+        $("#id_username").focus();
+    });
+</script>
+{% endblock extrajs %}
+

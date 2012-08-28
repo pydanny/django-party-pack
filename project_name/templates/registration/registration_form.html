@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Register for Open Bill{% endblock  %}
+
+
+{% block content %}
+
+<div class="row">
+    <div class="span6 offset2">
+      
+        <h1>Register for Open Bill</h1>
+        <form class='form-stacked well' action="" method="post">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Change</button>
+          </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

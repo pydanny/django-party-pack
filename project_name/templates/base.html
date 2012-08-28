@@ -1,0 +1,53 @@
+<html>
+<head>
+
+    <title>Open Bill: {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <script src="{{ STATIC_URL }}js/jquery-1.8.0.min.js"></script>    
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js" type="text/javascript"></script>
+    {% block extracss %}{% endblock %}
+    
+</head>
+
+
+<body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+        <ul class="nav">
+          <li class="active">
+            <a href="{% url dashboard %}"><i class="icon-home icon-white"></i> Home</a>
+          </li>
+        </ul>
+        {% if request.user.is_authenticated %}
+          <ul class="nav pull-right">
+              <li class="active"><a>{{ request.user }}</a></li>
+            <li><a href="{% url logout %}">logout</a></li>  
+          </ul>
+        {% endif %}
+
+    </div>
+  </div>
+</div>  
+<div class="container-fluid">
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                <a class="close">×</a>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+{% block content %}{% endblock %}      
+</div>
+
+
+{% block extrajs %}
+{% endblock %}
+
+
+
+</body>
+</html>

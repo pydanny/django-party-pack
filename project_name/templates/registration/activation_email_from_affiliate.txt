@@ -1,0 +1,11 @@
+You have been registered as a coach at {{ request.affiliate.slug }}.{{ site.domain }} by {{ request.user.first_name }} {{ request.user.last_name }}.
+
+To activate your registration, please visit the following page:
+
+http://{{ request.affiliate.slug }}.{{ site.domain }}{% url registration_activate activation_key %}
+
+This page will expire in {{ expiration_days }} day{{ expiration_days|pluralize }}.
+
+***
+
+If you didn't register this account you can simply delete this email and we won't bother you again.
