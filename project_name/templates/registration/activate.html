@@ -2,9 +2,12 @@
 
 
 {% block title %}Account activation error{% endblock %}
-
+{% block page_title %}Account activation error{% endblock %}
 
 {% block content %}
-	<h1>Account activation error</h1>
+    <div class="row">
+        <div class="span6">	
   	<p>The activation key "{{ activation_key }}" is invalid and cannot be used to activate this account.</p>
+        </div>
+    </div>
 {% endblock %}

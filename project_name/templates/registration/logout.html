@@ -2,15 +2,13 @@
 
 
 {% block title %}Logged out{% endblock %}
+{% block page_title %}Logged out{% endblock %}
 
 {% block content %}
   
   <div class="row">
-    <div class="span12"
+    <div class="span12">
 
-      <h2>Logged out</h2>
-      <p>You have been logged out.</p>  
-      <h2>Log in</h2>  
       <form action="." method="post" class="login_form">{% csrf_token %}
       {{ form|crispy }}
         <div class="actions">
