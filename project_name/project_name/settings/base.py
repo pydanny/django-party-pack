@@ -61,6 +61,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'profiletools.middleware.LazyProfileMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = [
@@ -71,6 +72,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.static",
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
+    'profiletools.context_processors.fetch_profile',
 ]
 
 ROOT_URLCONF = '{{ project_name }}.urls'
@@ -150,4 +152,6 @@ THUMBNAIL_DEBUG = True
 
 
 LOGIN_REDIRECT_URL = "/"
-LOGIN_URL = "/log-in/"
+LOGIN_URL = "/login/"
+
+AUTH_PROFILE_MODULE = "profiles.Profile"
